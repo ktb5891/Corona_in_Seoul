@@ -1,0 +1,57 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+### 서울특별시 구별 확진자 동향
+
+## 디렉토리 설정
+```{r}
+getwd()
+setwd("C:/Users/ktb58/OneDrive/바탕 화면/210308/코로나_미니프로젝트")
+```
+
+
+## 필요한 모듈 설치 및 불러오기
+
+```{r}
+# install.packages("lubridate")
+library(dplyr)
+library(lubridate)
+```
+
+## 데이터 불러오기
+
+```{r message=TRUE, warning=TRUE}
+w = read.csv('서울시 코로나19 확진자 현황.csv')
+head(w)
+```
+서울시 확진자 데이터를 불러온다
+
+## 데이터 변수설정
+
+```{r}
+sel_w = select(w,'확진일','지역')
+sel_w = rename(sel_w,
+               date = '확진일',
+               area = '지역'
+               )
+sel_w = cbind(sel_w, dates = substr(sel_w$date,1,7))
+```
+
+## 구별 확진자 조회
+```{r}
+areas= c(levels(sel_w[,'area']))
+
+for(i in (1:length(areas))){
+  pick_area = data.frame(sel_w %>%
+                           filter(area == areas[i]) %>%
+                           group_by(dates) %>%
+                           tally())
+  print(areas[i])
+  print(head(pick_area))
+  print("===============")
+  
+}
+
+```
