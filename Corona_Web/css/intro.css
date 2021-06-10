@@ -1,0 +1,28 @@
+
+
+#wrap1{
+	position: relative;
+	top : 13%;
+	padding: 0;
+    
+}
+
+
+#title{
+	position:relative;
+	left : 43%;
+	top: 15%;
+}
+
+    
+#wrap1>span {
+	display:inline;
+	float: left;
+    
+	padding : 3.9%;
+	height: auto;
+}
+
+ul li b {
+    font-size: large;
+}

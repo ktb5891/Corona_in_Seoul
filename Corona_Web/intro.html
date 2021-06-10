@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <title> Covid-19 in Seoul </title>
+    
+    <link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/intro.css">
+</head>
+<body style="overflow-x:hidden">    
+    <header>
+        <a id="logo" href="index.html"><img width = 100%; src="img/covid_logo1.png" /></a>
+        <div id="menubar">
+            
+            <ul>
+                <li><a href="intro.html"><img width = 100%; src="img/intro.png" /></a></li>
+                <li><a href="analysis.html"><img width = 100%; src="img/analysis.png" /></a></li>
+                <li><a href="https://github.com/ktb5891/Corona_in_Seoul"><img width = 100%; src="img/download.png" /></a></li>
+            </ul>
+        </div>
+
+    
+    </header>
+    <div id="title">
+		<a><img src="img/team_intro.png" /></a>
+	</div>
+
+	
+	<span id='wrap1'> 
+        <span id='box1'>
+            <img src = "img/taebeom.png" width="210" height="200">
+			<p>
+			<ul>
+				<li><b> 이름 </b></li>
+					<dd>곽태범</dd>
+                    <br>
+				<li><b> 전공 </b></li>
+					<dd>산업공학과</dd>
+                    <br>
+				<li><b> 역량 </b></li>
+					<dd> R, Python, Java, Html, CSS </dd>
+                    <br>
+				<li><b> 관심주제 </b></li>
+					<dd>데이터 분석, 머신러닝, Hadoop, SQL  </dd>
+                    <br>
+				<li><b> 역할 </b></li>
+					<dd>데이터 수집, 시각화, 웹 페이지 구성 </dd>
+                    <br>
+				<li><b> 이메일 </b></li>
+					<dd>ktb5891@naver.com</dd>
+			</ul>
+        
+        </span>
+		<span id='box1'>
+            <img src = "img/sujin.png" width="210" height="200">
+			<p>
+			<ul>
+				<li><b> 이름 </b></li>
+					<dd>소재희</dd>
+                    <br>
+				<li><b> 전공 </b></li>
+					<dd>경영학부</dd>
+                    <br>
+				<li><b> 역량 </b></li>
+					<dd> R, Python, Html, CSS </dd>
+                    <br>
+				<li><b> 관심주제 </b></li>
+					<dd>데이터 분석, 데이터 기획, 데이터 마케팅 </dd>
+                    <br>
+				<li><b> 역할 </b></li>
+					<dd>데이터 수집, PPT제작 </dd>
+                    <br>
+				<li><b> 이메일 </b></li>
+					<dd>wogml6818@naver.com</dd>
+			</ul>
+        
+        </span>
+		<span id='box1'>
+            <img src = "img/gwangpyung.png" width="210" height="200">
+			<p>
+			<ul>
+				<li><b> 이름 </b></li>
+					<dd>이광평</dd>
+                    <br>
+				<li><b> 전공 </b></li>
+					<dd>동물생명공학과</dd>
+                    <br>
+				<li><b> 역량 </b></li>
+					<dd> R, Python, Html, CSS </dd>
+                    <br>
+				<li><b> 관심주제 </b></li>
+					<dd>데이터분석, 머신러닝 </dd>
+                    <br>
+				<li><b> 역할 </b></li>
+					<dd>데이터 수집, 웹 디자인 </dd>
+                    <br>
+				<li><b> 이메일 </b></li>
+					<dd>kp1472@gmail.com</dd>
+			</ul>
+        
+        </span>
+		<span id='box1'>
+            <img src = "img/hyunmin.png" width="210" height="200">
+			<p>
+			<ul>
+				<li><b> 이름 </b></li>
+					<dd>이현민</dd>
+                    <br>
+				<li><b> 전공 </b></li>
+					<dd>컴퓨터공학과</dd>
+                    <br>
+				<li><b> 역량 </b></li>
+					<dd>java , C, 웹프로그래밍, Python, Html, CSS</dd>
+                    <br>
+				<li><b> 관심주제 </b></li>
+					<dd>웹프로그래밍, 머신러닝</dd>
+                    <br>
+				<li><b> 역할 </b></li>
+					<dd>데이터 수집, 웹페이지(분석) 구성</dd>
+                    <br>
+				<li><b> 이메일 </b></li>
+					<dd>hwlee7062@naver.com</dd>
+			</ul>
+        
+        </span>
+		<span id='box1'>
+            <img src = "img/jeahee.png" width="210" height="200">
+			<p>
+			<ul>
+				<li><b> 이름 </b></li>
+					<dd>장수진</dd>
+                    <br>
+				<li><b> 전공 </b></li>
+					<dd>멀티미디어공학과</dd>
+                    <br>
+				<li><b> 역량 </b></li>
+					<dd>Python, R, C언어, Html, CSS</dd>
+                    <br>
+				<li><b> 관심주제 </b></li>
+					<dd>머신러닝, 데이터분석</dd>
+                    <br>
+				<li><b> 역할 </b></li>
+					<dd>데이터 수집, 웹페이지 디자인</dd>
+                    <br>
+				<li><b> 이메일 </b></li>
+					<dd>sjin4430@naver.com</dd>
+			</ul>
+        </span>
+        
+
+    </span>
+	   
+    <footer>
+        <div class="footer">
+            <span>
+                서울 코로나 확진자 동향 분석
+            </span>
+            <span> | </span>
+            <span> 이메일 : aaaa@naver.com </span>
+            <span> | </span>
+            <span> 전화번호 : 010-0000-0000 </span>
+            <span> | </span>
+            <p> 주소 : 서울특별시 관악구 신림동 572-1   &nbsp;| 깃 주소 :
+                <a href="https://github.com/ktb5891"><i class="fa fa-github fa-2x" aria-hidden="true"></i></i></a></p>
+            
+
+        </div>
+    </footer>
+</body>

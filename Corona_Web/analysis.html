@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+	<meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+	<!-- 이미지 슬라이드 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="css/analysis_img_slide_layout.css">
+	<!-- 이미지 슬라이드 -->
+	
+    <title> Covid-19 in Seoul </title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>    
+    <header>
+        <a id="logo" href="index.html"><img width = 100%; src="img/covid_logo1.png" /></a>
+        <div id="menubar">
+            
+            <ul>
+                <li><a href="intro.html"><img width = 100%; src="img/intro.png" /></a></li>
+                <li><a href="analysis.html"><img width = 100%; src="img/analysis.png" /></a></li>
+                <li><a href="https://github.com/ktb5891/Corona_in_Seoul"><img width = 100%; src="img/download.png" /></a></li>
+            </ul>
+        </div>    
+    </header>
+   
+	<div class="wrapper">
+        <div class="container">
+            <ul class="slider">
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s1.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s2.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s3.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s4.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s5.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s6.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s7.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s8.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s9.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s10.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s11.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s12.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s13.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s14.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s15.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s16.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s17.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s18.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s19.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s20.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s21.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s22.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s23.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s24.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s25.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s26.JPG" /></li>
+                <li class = "item"><img class ="img_border" src = "img/ppt_img/s27.JPG" /></li> 
+            </ul>
+        </div>
+        <div class="btn" >
+            <a class="prev" style="text-decoration: none;">&#10094</a>
+            <a class="next" style="text-decoration: none;">&#10095</a>
+        </div>
+    </div>
+    <script src="js/slider.js"></script>
+	<footer>
+        <div class="footer">
+            <span>
+                서울 코로나 확진자 동향 분석
+            </span>
+            <span> | </span>
+            <span> 이메일 : aaaa@naver.com </span>
+            <span> | </span>
+            <span> 전화번호 : 010-0000-0000 </span>
+            <span> | </span>
+            <p> 주소 : 서울특별시 관악구 신림동 572-1   &nbsp;| 깃 주소 :
+                <a href="https://github.com/ktb5891"><i class="fa fa-github fa-2x" aria-hidden="true"></i></i></a></p>
+            
+
+        </div>
+    </footer>
+</body>
+</html>
